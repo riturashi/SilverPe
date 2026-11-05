@@ -6,47 +6,46 @@
 
 <!--</resources>-->
 
-
 <resources>
 
-    <!-- Akaal Pay Brand Colors mapped to existing names -->
-    <color name="feno_primary">#FFC107</color>       <!-- Rich Gold/Yellow (Logo PAY color) -->
-    <color name="feno_primary_dark">#D4A017</color>  <!-- Darker Gold shade -->
-    <color name="feno_primary_light">#FFF8E1</color> <!-- Light Gold tint for background/cards -->
+    <!-- SilverPe Brand Colors mapped to existing names -->
+    <color name="feno_primary">#D0A81F</color>       <!-- Gold (LOGIN button, Register link, support values) -->
+    <color name="feno_primary_dark">#B08C12</color>  <!-- Darker gold shade -->
+    <color name="feno_primary_light">#FBF4D9</color> <!-- Light gold tint for background/cards -->
 
-    <color name="feno_secondary">#111111</color>     <!-- Deep Black (Logo AKAAL text color) -->
-    <color name="feno_secondary_dark">#000000</color>
-    <color name="feno_secondary_light">#F5F5F5</color>
+    <color name="feno_secondary">#0D2A6B</color>     <!-- Navy blue (SilverPe logo text, Forgot Password link) -->
+    <color name="feno_secondary_dark">#081B47</color>
+    <color name="feno_secondary_light">#E8EEF9</color>
 
 
     <!-- Receipt / Specific UI Elements -->
-    <color name="feno_text_rec_title">#111111</color>
-    <color name="text_head_title">#222222</color>
-    <color name="rec_border">#E0E0E0</color>
-    <color name="poweredby">#757575</color>
+    <color name="feno_text_rec_title">#0D2A6B</color>
+    <color name="text_head_title">#1A1A1A</color>
+    <color name="rec_border">#D9E2EC</color>
+    <color name="poweredby">#6B7280</color>
 
     <!-- Background -->
-    <color name="app_background">#F9F9F9</color>
+    <color name="app_background">#F0F7FF</color>    <!-- Light blue page background -->
     <color name="surface_white">@color/white</color>
     <color name="card_background">@color/white</color>
 
     <!-- Text -->
-    <color name="text_primary">#222222</color>
-    <color name="text_secondary">#757575</color>
-    <color name="text_hint">#B0B0B0</color>
-    <color name="text_header">#111111</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+    <color name="text_header">#0D2A6B</color>
 
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
     <!-- Border -->
-    <color name="border_color">#E0E0E0</color>
-    <color name="divider_color">#EFEFEF</color>
+    <color name="border_color">#D9E2EC</color>      <!-- Input field / card border -->
+    <color name="divider_color">#EAF0F6</color>
 
     <!-- Status -->
-    <color name="success">#28A745</color>
-    <color name="warning">#FFC107</color>
+    <color name="success">#5E9A63</color>           <!-- Green from support labels -->
+    <color name="warning">#D0A81F</color>
     <color name="error">#D32F2F</color>
-    <color name="card_back">#FFF8E1</color>
+    <color name="card_back">#FBF4D9</color>
 
 </resources>

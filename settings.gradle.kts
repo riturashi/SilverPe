@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AkaalPay"
+rootProject.name = "SilverPe"
 include(":app")

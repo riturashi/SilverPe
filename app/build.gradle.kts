@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.akaalpay"
+    namespace = "com.silverpe"
     compileSdk = 35
 
 
@@ -14,7 +14,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.akaalpay"
+        applicationId = "com.silverpe"
         minSdk = 24
         targetSdk = 35
         versionCode = 27

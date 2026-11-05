@@ -60,7 +60,7 @@
                     android:layout_height="84dp"
                     android:layout_marginTop="8dp">
 
-                    <com.akaalpay.instantpay.CircularTimerView
+                    <com.silverpe.instantpay.CircularTimerView
                         android:id="@+id/timerProgress"
                         android:layout_width="84dp"
                         android:layout_height="84dp" />

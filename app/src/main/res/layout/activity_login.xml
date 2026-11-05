@@ -22,7 +22,7 @@
         <ImageView
             android:layout_width="148dp"
             android:layout_height="80dp"
-            android:contentDescription="AkaalPay logo"
+            android:contentDescription="SilverPe logo"
             android:scaleType="fitStart"
             android:src="@drawable/logo" />
 
@@ -248,7 +248,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New to AkaalPay?"
+                        android:text="New to SilverPe?"
                         android:textColor="@color/text_secondary"
                         android:textSize="13sp" />
 
@@ -339,7 +339,7 @@
                     android:layout_marginStart="6dp"
                     android:contentDescription="Call customer support"
                     android:maxLines="1"
-                    android:text="+91 9307330000"
+                    android:text="+91 8120080065"
                     android:textColor="@color/text_header"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -374,7 +374,7 @@
                     android:contentDescription="Email customer support"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="support@akaalpay.com"
+                    android:text="support@silverpe.com"
                     android:textColor="@color/text_header"
                     android:textSize="11sp"
                     android:textStyle="bold" />

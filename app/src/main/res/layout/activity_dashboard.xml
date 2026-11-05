@@ -29,7 +29,7 @@
         <!-- activity_main.xml mein purana BottomNavigationView (ya pichla MaterialCardView wala block) hata kar
      ye rakho. mainContent LinearLayout ke andar, fragment_container ke baad. -->
 
-        <com.akaalpay.utils.CurvedBottomNavigationView
+        <com.silverpe.utils.CurvedBottomNavigationView
             android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
