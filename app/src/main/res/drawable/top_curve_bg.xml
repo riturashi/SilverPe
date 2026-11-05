@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1080dp"
+    android:height="480dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="480">
+
+    <!-- BLUE GRADIENT BACKGROUND -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,0H1080V480H0Z"/>
+
+    <path
+        android:pathData="M0,0H1080V420
+    C820,460 260,490 0,420Z"
+        android:fillColor="@color/feno_secondary_light"/>
+
+    <path
+        android:pathData="M0,0H1080V360
+        C780,410 300,430 0,360Z"
+        android:fillColor="@color/feno_primary"/>
+
+</vector>

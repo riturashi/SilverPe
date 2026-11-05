@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_background">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/header_all"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/feno_primary"
+        android:paddingHorizontal="15dp">
+
+        <ImageView
+            android:translationY="10dp"
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_back_arrow"
+            android:tint="@color/white" />
+
+        <TextView
+            android:translationY="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Aadhar Pay Report"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnFilter"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_filter"
+            android:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+
+
+
+    <!-- Report List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"/>
+
+</LinearLayout>

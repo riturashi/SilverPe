@@ -1,0 +1,1958 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <!-- Premium app bar: brand identity + quick actions, followed by greeting -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_profile_inner"
+                    android:gravity="center"
+                    android:text="F"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:contentDescription="FenoPay logo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FenoPay"
+                        android:textColor="#17192F"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="Payments made simple"
+                        android:textColor="#85899D"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_service_card_premium">
+                    <ImageView
+                        android:id="@+id/btnNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="11dp"
+                        android:src="@drawable/ic_notification"
+                        android:contentDescription="Notifications" />
+                    <View
+                        android:background="@drawable/bg_notification_dot"
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"/>
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_profile_inner"
+                    android:src="@drawable/ic_user"
+                    android:scaleType="fitCenter"
+                    android:tint="@color/white"
+                    android:contentDescription="Profile" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GOOD MORNING"
+                    android:textColor="#777B91"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.13"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Welcome back"
+                    android:textColor="#17192F"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Wallet hero: asymmetric dark card with primary action -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="#211A66"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TOTAL WALLET BALANCE"
+                        android:textColor="#C8C4F3"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08"
+                        android:textStyle="bold" />
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:background="#6BE0B0" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="ACTIVE"
+                        android:textColor="#B8F3D9"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvWalletBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="₹ 24,580.00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32sp"
+                    android:fontFamily="sans"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/btnAddMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:background="@drawable/bg_service_card_premium"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="17dp"
+                        android:paddingEnd="17dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+  Add money"
+                            android:textColor="#211A66"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TODAY'S EARNINGS"
+                            android:textColor="#C8C4F3"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvTodayEarning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="₹ 1,250.00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Compact support strip -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_service_card_premium"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+            <ImageView
+                android:id="@+id/btnCallSupport"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_call_support"
+                android:contentDescription="Call support" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Need help with a transaction?"
+                android:textColor="#34364D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact support  ›"
+                android:textColor="#4D3EDB"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.youth.banner.Banner
+            android:id="@+id/bannerSlider"
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/announcementCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="#EEECFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+            <TextView
+                android:id="@+id/tvAnnouncement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:padding="14dp"
+                android:text="Updates and announcements will appear here"
+                android:textColor="#39316E"
+                android:textSize="12sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="20dp"
+            android:text="Distributor Services"
+            android:textColor="#17192F"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:text="Essential services, all in one place"
+            android:textColor="#777B91"
+            android:textSize="12sp" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="11dp"
+            android:columnCount="3"
+            android:useDefaultMargins="false">
+            <LinearLayout
+                android:id="@+id/btnAddUser"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Add User"
+                        android:src="@drawable/ic_3d_agent_collection" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Add User"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!--                     <LinearLayout -->
+            <!--                         android:id="@+id/btnMicroAtm" -->
+            <!--                         android:layout_width="0dp" -->
+            <!--                         android:layout_height="104dp" -->
+            <!--                         android:layout_columnWeight="1" -->
+            <!--                         android:layout_margin="5dp" -->
+            <!--                         android:background="@drawable/bg_service_card_premium" -->
+            <!--                         android:clickable="true" -->
+            <!--                         android:focusable="true" -->
+            <!--                         android:gravity="center" -->
+            <!--                         android:orientation="vertical" -->
+            <!--                         android:padding="8dp"> -->
+            <!--                         <FrameLayout -->
+            <!--                             android:layout_width="48dp" -->
+            <!--                             android:layout_height="48dp" -->
+            <!--                             android:background="@drawable/bg_icon_aeps"> -->
+            <!--                             <ImageView -->
+            <!--                                 android:layout_width="27dp" -->
+            <!--                                 android:layout_height="27dp" -->
+            <!--                                 android:layout_gravity="center" -->
+            <!--                                 android:contentDescription="MicroAtm" -->
+            <!--                                 android:src="@drawable/ic_user" /> -->
+            <!--                         </FrameLayout> -->
+            <!--                         <TextView -->
+            <!--                             android:layout_width="match_parent" -->
+            <!--                             android:layout_height="wrap_content" -->
+            <!--                             android:layout_marginTop="9dp" -->
+            <!--                             android:ellipsize="end" -->
+            <!--                             android:fontFamily="sans" -->
+            <!--                             android:gravity="center" -->
+            <!--                             android:maxLines="2" -->
+            <!--                             android:text="MicroAtm" -->
+            <!--                             android:textColor="#22243A" -->
+            <!--                             android:textSize="11sp" -->
+            <!--                             android:textStyle="bold" /> -->
+            <!--                     </LinearLayout> -->
+            <LinearLayout
+                android:id="@+id/userList"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="User List"
+                        android:src="@drawable/ic_3d_clubs_and_associations" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="User List"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!--                     <LinearLayout -->
+            <!--                         android:id="@+id/btnExpressMoneyTransfer" -->
+            <!--                         android:layout_width="0dp" -->
+            <!--                         android:layout_height="104dp" -->
+            <!--                         android:layout_columnWeight="1" -->
+            <!--                         android:layout_margin="5dp" -->
+            <!--                         android:background="@drawable/bg_service_card_premium" -->
+            <!--                         android:clickable="true" -->
+            <!--                         android:focusable="true" -->
+            <!--                         android:gravity="center" -->
+            <!--                         android:orientation="vertical" -->
+            <!--                         android:padding="8dp"> -->
+            <!--                         <FrameLayout -->
+            <!--                             android:layout_width="48dp" -->
+            <!--                             android:layout_height="48dp" -->
+            <!--                             android:background="@drawable/bg_icon_aeps"> -->
+            <!--                             <ImageView -->
+            <!--                                 android:layout_width="27dp" -->
+            <!--                                 android:layout_height="27dp" -->
+            <!--                                 android:layout_gravity="center" -->
+            <!--                                 android:contentDescription="ExpressMoneyTransfer" -->
+            <!--                                 android:src="@drawable/ic_user" /> -->
+            <!--                         </FrameLayout> -->
+            <!--                         <TextView -->
+            <!--                             android:layout_width="match_parent" -->
+            <!--                             android:layout_height="wrap_content" -->
+            <!--                             android:layout_marginTop="9dp" -->
+            <!--                             android:ellipsize="end" -->
+            <!--                             android:fontFamily="sans" -->
+            <!--                             android:gravity="center" -->
+            <!--                             android:maxLines="2" -->
+            <!--                             android:text="ExpressMoneyTransfer" -->
+            <!--                             android:textColor="#22243A" -->
+            <!--                             android:textSize="11sp" -->
+            <!--                             android:textStyle="bold" /> -->
+            <!--                     </LinearLayout> -->
+            <!--                     <LinearLayout -->
+            <!--                         android:id="@+id/btnAadharPay" -->
+            <!--                         android:layout_width="0dp" -->
+            <!--                         android:layout_height="104dp" -->
+            <!--                         android:layout_columnWeight="1" -->
+            <!--                         android:layout_margin="5dp" -->
+            <!--                         android:background="@drawable/bg_service_card_premium" -->
+            <!--                         android:clickable="true" -->
+            <!--                         android:focusable="true" -->
+            <!--                         android:gravity="center" -->
+            <!--                         android:orientation="vertical" -->
+            <!--                         android:padding="8dp"> -->
+            <!--                         <FrameLayout -->
+            <!--                             android:layout_width="48dp" -->
+            <!--                             android:layout_height="48dp" -->
+            <!--                             android:background="@drawable/bg_icon_aeps"> -->
+            <!--                             <ImageView -->
+            <!--                                 android:layout_width="27dp" -->
+            <!--                                 android:layout_height="27dp" -->
+            <!--                                 android:layout_gravity="center" -->
+            <!--                                 android:contentDescription="AadharPay" -->
+            <!--                                 android:src="@drawable/ic_user" /> -->
+            <!--                         </FrameLayout> -->
+            <!--                         <TextView -->
+            <!--                             android:layout_width="match_parent" -->
+            <!--                             android:layout_height="wrap_content" -->
+            <!--                             android:layout_marginTop="9dp" -->
+            <!--                             android:ellipsize="end" -->
+            <!--                             android:fontFamily="sans" -->
+            <!--                             android:gravity="center" -->
+            <!--                             android:maxLines="2" -->
+            <!--                             android:text="AadharPay" -->
+            <!--                             android:textColor="#22243A" -->
+            <!--                             android:textSize="11sp" -->
+            <!--                             android:textStyle="bold" /> -->
+            <!--                     </LinearLayout> -->
+            <LinearLayout
+                android:id="@+id/fundTransfer"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Fund Transfer"
+                        android:src="@drawable/ic_3d_money_transfer" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Fund Transfer"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fundRequest"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Fund Request"
+                        android:src="@drawable/ic_3d_money_transfer" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Fund Request"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!--                     <LinearLayout -->
+            <!--                         android:id="@+id/btnCms" -->
+            <!--                         android:layout_width="0dp" -->
+            <!--                         android:layout_height="104dp" -->
+            <!--                         android:layout_columnWeight="1" -->
+            <!--                         android:layout_margin="5dp" -->
+            <!--                         android:background="@drawable/bg_service_card_premium" -->
+            <!--                         android:clickable="true" -->
+            <!--                         android:focusable="true" -->
+            <!--                         android:gravity="center" -->
+            <!--                         android:orientation="vertical" -->
+            <!--                         android:padding="8dp"> -->
+            <!--                         <FrameLayout -->
+            <!--                             android:layout_width="48dp" -->
+            <!--                             android:layout_height="48dp" -->
+            <!--                             android:background="@drawable/bg_icon_aeps"> -->
+            <!--                             <ImageView -->
+            <!--                                 android:layout_width="27dp" -->
+            <!--                                 android:layout_height="27dp" -->
+            <!--                                 android:layout_gravity="center" -->
+            <!--                                 android:contentDescription="Cms" -->
+            <!--                                 android:src="@drawable/ic_user" /> -->
+            <!--                         </FrameLayout> -->
+            <!--                         <TextView -->
+            <!--                             android:layout_width="match_parent" -->
+            <!--                             android:layout_height="wrap_content" -->
+            <!--                             android:layout_marginTop="9dp" -->
+            <!--                             android:ellipsize="end" -->
+            <!--                             android:fontFamily="sans" -->
+            <!--                             android:gravity="center" -->
+            <!--                             android:maxLines="2" -->
+            <!--                             android:text="Cms" -->
+            <!--                             android:textColor="#22243A" -->
+            <!--                             android:textSize="11sp" -->
+            <!--                             android:textStyle="bold" /> -->
+            <!--                     </LinearLayout> -->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/btnWalletTransfer"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="104dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:background="@drawable/bg_service_card_premium"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="8dp">-->
+<!--                <FrameLayout-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:background="@drawable/bg_icon_aeps">-->
+<!--                    <ImageView-->
+<!--                        android:layout_width="27dp"-->
+<!--                        android:layout_height="27dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:contentDescription="Wallet Transfer"-->
+<!--                        android:src="@drawable/ic_3d_wallet_transfer" />-->
+<!--                </FrameLayout>-->
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="9dp"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:fontFamily="sans"-->
+<!--                    android:gravity="center"-->
+<!--                    android:maxLines="2"-->
+<!--                    android:text="Wallet Transfer"-->
+<!--                    android:textColor="#22243A"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </LinearLayout>-->
+        </GridLayout>
+
+        <!--         <TextView -->
+        <!--             android:layout_width="match_parent" -->
+        <!--             android:layout_height="wrap_content" -->
+        <!--             android:layout_marginStart="20dp" -->
+        <!--             android:layout_marginTop="24dp" -->
+        <!--             android:layout_marginEnd="20dp" -->
+        <!--             android:text="Business Growth" -->
+        <!--             android:textColor="#17192F" -->
+        <!--             android:textSize="19sp" -->
+        <!--             android:textStyle="bold" /> -->
+        <!--         <GridLayout -->
+        <!--             android:layout_width="match_parent" -->
+        <!--             android:layout_height="wrap_content" -->
+        <!--             android:layout_marginStart="11dp" -->
+        <!--             android:layout_marginTop="8dp" -->
+        <!--             android:layout_marginEnd="11dp" -->
+        <!--             android:columnCount="3" -->
+        <!--             android:useDefaultMargins="false"> -->
+        <!--                     <LinearLayout -->
+        <!--                         android:id="@+id/btnLeadPersonalLoan" -->
+        <!--                         android:layout_width="0dp" -->
+        <!--                         android:layout_height="104dp" -->
+        <!--                         android:layout_columnWeight="1" -->
+        <!--                         android:layout_margin="5dp" -->
+        <!--                         android:background="@drawable/bg_service_card_premium" -->
+        <!--                         android:clickable="true" -->
+        <!--                         android:focusable="true" -->
+        <!--                         android:gravity="center" -->
+        <!--                         android:orientation="vertical" -->
+        <!--                         android:padding="8dp"> -->
+        <!--                         <FrameLayout -->
+        <!--                             android:layout_width="48dp" -->
+        <!--                             android:layout_height="48dp" -->
+        <!--                             android:background="@drawable/bg_icon_aeps"> -->
+        <!--                             <ImageView -->
+        <!--                                 android:layout_width="27dp" -->
+        <!--                                 android:layout_height="27dp" -->
+        <!--                                 android:layout_gravity="center" -->
+        <!--                                 android:contentDescription="LeadPersonalLoan" -->
+        <!--                                 android:src="@drawable/ic_user" /> -->
+        <!--                         </FrameLayout> -->
+        <!--                         <TextView -->
+        <!--                             android:layout_width="match_parent" -->
+        <!--                             android:layout_height="wrap_content" -->
+        <!--                             android:layout_marginTop="9dp" -->
+        <!--                             android:ellipsize="end" -->
+        <!--                             android:fontFamily="sans" -->
+        <!--                             android:gravity="center" -->
+        <!--                             android:maxLines="2" -->
+        <!--                             android:text="LeadPersonalLoan" -->
+        <!--                             android:textColor="#22243A" -->
+        <!--                             android:textSize="11sp" -->
+        <!--                             android:textStyle="bold" /> -->
+        <!--                     </LinearLayout> -->
+        <!--                     <LinearLayout -->
+        <!--                         android:id="@+id/btnLeadBusinessLoan" -->
+        <!--                         android:layout_width="0dp" -->
+        <!--                         android:layout_height="104dp" -->
+        <!--                         android:layout_columnWeight="1" -->
+        <!--                         android:layout_margin="5dp" -->
+        <!--                         android:background="@drawable/bg_service_card_premium" -->
+        <!--                         android:clickable="true" -->
+        <!--                         android:focusable="true" -->
+        <!--                         android:gravity="center" -->
+        <!--                         android:orientation="vertical" -->
+        <!--                         android:padding="8dp"> -->
+        <!--                         <FrameLayout -->
+        <!--                             android:layout_width="48dp" -->
+        <!--                             android:layout_height="48dp" -->
+        <!--                             android:background="@drawable/bg_icon_aeps"> -->
+        <!--                             <ImageView -->
+        <!--                                 android:layout_width="27dp" -->
+        <!--                                 android:layout_height="27dp" -->
+        <!--                                 android:layout_gravity="center" -->
+        <!--                                 android:contentDescription="LeadBusinessLoan" -->
+        <!--                                 android:src="@drawable/ic_user" /> -->
+        <!--                         </FrameLayout> -->
+        <!--                         <TextView -->
+        <!--                             android:layout_width="match_parent" -->
+        <!--                             android:layout_height="wrap_content" -->
+        <!--                             android:layout_marginTop="9dp" -->
+        <!--                             android:ellipsize="end" -->
+        <!--                             android:fontFamily="sans" -->
+        <!--                             android:gravity="center" -->
+        <!--                             android:maxLines="2" -->
+        <!--                             android:text="LeadBusinessLoan" -->
+        <!--                             android:textColor="#22243A" -->
+        <!--                             android:textSize="11sp" -->
+        <!--                             android:textStyle="bold" /> -->
+        <!--                     </LinearLayout> -->
+        <!--                     <LinearLayout -->
+        <!--                         android:id="@+id/btnLeadInsuranceLoan" -->
+        <!--                         android:layout_width="0dp" -->
+        <!--                         android:layout_height="104dp" -->
+        <!--                         android:layout_columnWeight="1" -->
+        <!--                         android:layout_margin="5dp" -->
+        <!--                         android:background="@drawable/bg_service_card_premium" -->
+        <!--                         android:clickable="true" -->
+        <!--                         android:focusable="true" -->
+        <!--                         android:gravity="center" -->
+        <!--                         android:orientation="vertical" -->
+        <!--                         android:padding="8dp"> -->
+        <!--                         <FrameLayout -->
+        <!--                             android:layout_width="48dp" -->
+        <!--                             android:layout_height="48dp" -->
+        <!--                             android:background="@drawable/bg_icon_aeps"> -->
+        <!--                             <ImageView -->
+        <!--                                 android:layout_width="27dp" -->
+        <!--                                 android:layout_height="27dp" -->
+        <!--                                 android:layout_gravity="center" -->
+        <!--                                 android:contentDescription="LeadInsuranceLoan" -->
+        <!--                                 android:src="@drawable/ic_user" /> -->
+        <!--                         </FrameLayout> -->
+        <!--                         <TextView -->
+        <!--                             android:layout_width="match_parent" -->
+        <!--                             android:layout_height="wrap_content" -->
+        <!--                             android:layout_marginTop="9dp" -->
+        <!--                             android:ellipsize="end" -->
+        <!--                             android:fontFamily="sans" -->
+        <!--                             android:gravity="center" -->
+        <!--                             android:maxLines="2" -->
+        <!--                             android:text="LeadInsuranceLoan" -->
+        <!--                             android:textColor="#22243A" -->
+        <!--                             android:textSize="11sp" -->
+        <!--                             android:textStyle="bold" /> -->
+        <!--                     </LinearLayout> -->
+        <!--                     <LinearLayout -->
+        <!--                         android:id="@+id/btnLeadCreditCard" -->
+        <!--                         android:layout_width="0dp" -->
+        <!--                         android:layout_height="104dp" -->
+        <!--                         android:layout_columnWeight="1" -->
+        <!--                         android:layout_margin="5dp" -->
+        <!--                         android:background="@drawable/bg_service_card_premium" -->
+        <!--                         android:clickable="true" -->
+        <!--                         android:focusable="true" -->
+        <!--                         android:gravity="center" -->
+        <!--                         android:orientation="vertical" -->
+        <!--                         android:padding="8dp"> -->
+        <!--                         <FrameLayout -->
+        <!--                             android:layout_width="48dp" -->
+        <!--                             android:layout_height="48dp" -->
+        <!--                             android:background="@drawable/bg_icon_aeps"> -->
+        <!--                             <ImageView -->
+        <!--                                 android:layout_width="27dp" -->
+        <!--                                 android:layout_height="27dp" -->
+        <!--                                 android:layout_gravity="center" -->
+        <!--                                 android:contentDescription="LeadCreditCard" -->
+        <!--                                 android:src="@drawable/ic_user" /> -->
+        <!--                         </FrameLayout> -->
+        <!--                         <TextView -->
+        <!--                             android:layout_width="match_parent" -->
+        <!--                             android:layout_height="wrap_content" -->
+        <!--                             android:layout_marginTop="9dp" -->
+        <!--                             android:ellipsize="end" -->
+        <!--                             android:fontFamily="sans" -->
+        <!--                             android:gravity="center" -->
+        <!--                             android:maxLines="2" -->
+        <!--                             android:text="LeadCreditCard" -->
+        <!--                             android:textColor="#22243A" -->
+        <!--                             android:textSize="11sp" -->
+        <!--                             android:textStyle="bold" /> -->
+        <!--                     </LinearLayout> -->
+        <!--                     <LinearLayout -->
+        <!--                         android:id="@+id/btnLeadSavingAccount" -->
+        <!--                         android:layout_width="0dp" -->
+        <!--                         android:layout_height="104dp" -->
+        <!--                         android:layout_columnWeight="1" -->
+        <!--                         android:layout_margin="5dp" -->
+        <!--                         android:background="@drawable/bg_service_card_premium" -->
+        <!--                         android:clickable="true" -->
+        <!--                         android:focusable="true" -->
+        <!--                         android:gravity="center" -->
+        <!--                         android:orientation="vertical" -->
+        <!--                         android:padding="8dp"> -->
+        <!--                         <FrameLayout -->
+        <!--                             android:layout_width="48dp" -->
+        <!--                             android:layout_height="48dp" -->
+        <!--                             android:background="@drawable/bg_icon_aeps"> -->
+        <!--                             <ImageView -->
+        <!--                                 android:layout_width="27dp" -->
+        <!--                                 android:layout_height="27dp" -->
+        <!--                                 android:layout_gravity="center" -->
+        <!--                                 android:contentDescription="LeadSavingAccount" -->
+        <!--                                 android:src="@drawable/ic_user" /> -->
+        <!--                         </FrameLayout> -->
+        <!--                         <TextView -->
+        <!--                             android:layout_width="match_parent" -->
+        <!--                             android:layout_height="wrap_content" -->
+        <!--                             android:layout_marginTop="9dp" -->
+        <!--                             android:ellipsize="end" -->
+        <!--                             android:fontFamily="sans" -->
+        <!--                             android:gravity="center" -->
+        <!--                             android:maxLines="2" -->
+        <!--                             android:text="LeadSavingAccount" -->
+        <!--                             android:textColor="#22243A" -->
+        <!--                             android:textSize="11sp" -->
+        <!--                             android:textStyle="bold" /> -->
+        <!--                     </LinearLayout> -->
+        <!--         </GridLayout> -->
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:text="Recharge &amp; Bill Payments"
+            android:textColor="#17192F"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+        <GridLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="11dp"
+            android:columnCount="3"
+            android:useDefaultMargins="false">
+            <LinearLayout
+                android:id="@+id/btnMobile"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Mobile Recharge"
+                        android:src="@drawable/ic_3d_mobile_prepaid" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Mobile Recharge"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnDth"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="DTH Recharge"
+                        android:src="@drawable/ic_3d_dth" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="DTH Recharge"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnAgentCollection"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Agent Collection"
+                        android:src="@drawable/ic_3d_agent_collection" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Agent Collection"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnBroadbandPostpaid"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Broadband Postpaid"
+                        android:src="@drawable/ic_3d_broadband_postpaid" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Broadband Postpaid"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnCableTv"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Cable TV"
+                        android:src="@drawable/ic_3d_cable_tv" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Cable TV"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnClubAssociation"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Clubs And Associations"
+                        android:src="@drawable/ic_3d_clubs_and_associations" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Clubs And Associations"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnCreditCard"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Credit Card"
+                        android:src="@drawable/ic_3d_credit_card" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Credit Card"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnDonation"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Donation"
+                        android:src="@drawable/ic_3d_donation" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Donation"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnDthBbps"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="DTH"
+                        android:src="@drawable/ic_3d_dth" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="DTH"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btneChallan"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="eChallan"
+                        android:src="@drawable/ic_3d_echallan" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="eChallan"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btneEducationFees"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Education Fees"
+                        android:src="@drawable/ic_3d_education_fees" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Education Fees"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnElectricity"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Electricity"
+                        android:src="@drawable/ic_3d_electricity" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Electricity"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnEvRecharge"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="EV Recharge"
+                        android:src="@drawable/ic_3d_ev_recharge" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="EV Recharge"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnFastag"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Fastag"
+                        android:src="@drawable/ic_3d_fastag" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Fastag"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnGas"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Gas"
+                        android:src="@drawable/ic_3d_gas" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Gas"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnHousingSociety"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Housing Society"
+                        android:src="@drawable/ic_3d_housing_society" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Housing Society"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnInsurance"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Insurance"
+                        android:src="@drawable/ic_3d_insurance" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Insurance"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnLandlinePostpaid"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Landline Postpaid"
+                        android:src="@drawable/ic_3d_landline_postpaid" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Landline Postpaid"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnLoanRepayment"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Loan Repayment"
+                        android:src="@drawable/ic_3d_loan_repayment" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Loan Repayment"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnLpgGas"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="LPG Gas"
+                        android:src="@drawable/ic_3d_lpg_gas" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="LPG Gas"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnMobilePostpaid"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Mobile Postpaid"
+                        android:src="@drawable/ic_3d_mobile_postpaid" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Mobile Postpaid"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnMobilePrepaid"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Mobile Prepaid"
+                        android:src="@drawable/ic_3d_mobile_prepaid" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Mobile Prepaid"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnMunicipalTaxes"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Municipal Taxes"
+                        android:src="@drawable/ic_3d_muncipal_taxes" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Municipal Taxes"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnNationalPensionSystem"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="National Pension"
+                        android:src="@drawable/ic_3d_national_pension_system" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="National Pension"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnNcmcRecharge"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="NCMC Recharge"
+                        android:src="@drawable/ic_3d_ncmc_recharge" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="NCMC Recharge"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnPrepaidMeter"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Prepaid Meter"
+                        android:src="@drawable/ic_3d_prepaid_meter" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Prepaid Meter"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnRecurringDeposit"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Recurring Deposit"
+                        android:src="@drawable/ic_3d_recurring_deposit" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Recurring Deposit"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnRental"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Rental"
+                        android:src="@drawable/ic_3d_rental" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Rental"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnSubscription"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Subscription"
+                        android:src="@drawable/ic_3d_subscription" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Subscription"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnWater"
+                android:layout_width="0dp"
+                android:layout_height="104dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_service_card_premium"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_icon_aeps">
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Water"
+                        android:src="@drawable/ic_3d_water" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:ellipsize="end"
+                    android:fontFamily="sans"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="Water"
+                    android:textColor="#22243A"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

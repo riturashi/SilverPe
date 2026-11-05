@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical">
+
+    <!-- 🔷 TOP STATUS -->
+    <RelativeLayout
+        android:id="@+id/layoutStatus"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/feno_primary"
+        android:padding="16dp">
+
+        <ImageView
+            android:translationY="10dp"
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_arrow"
+            android:tint="@color/white" />
+
+        <TextView
+            android:translationY="10dp"
+            android:id="@+id/txtHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recharge Receipt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAmount"
+                android:text="₹10"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStatus"
+                android:text="Pending"
+                android:textColor="#FFD54F"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDate"
+                android:text="22 Mar 2026, 02:34 PM"
+                android:textColor="#E3F2FD"
+                android:textSize="13sp"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 🔷 DETAILS CARD -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="-30dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginHorizontal="16dp"
+        card_view:cardCornerRadius="16dp"
+        card_view:cardElevation="6dp">
+
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recharge Details"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#333"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Mobile -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMobile"
+                android:text="Mobile : 9142389970"
+                android:textColor="#555" />
+
+            <View style="@style/Divider"/>
+
+            <!-- Operator -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOperator"
+                android:text="Operator : BSNL"
+                android:textColor="#555" />
+
+            <View style="@style/Divider"/>
+
+            <!-- Circle -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCircle"
+                android:text="Circle : Bihar"
+                android:textColor="#555" />
+
+            <View style="@style/Divider"/>
+
+            <!-- Ref -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtReference"
+                android:text="Reference ID : XXXXX"
+                android:textColor="#555" />
+
+            <View style="@style/Divider"/>
+
+            <!-- ACK -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAck"
+                android:text="ACK No : XXXXX"
+                android:textColor="#555" />
+
+            <View style="@style/Divider"/>
+
+            <!-- Message -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMessage"
+                android:text="Recharge pending..."
+                android:textColor="#777"
+                android:textSize="18sp"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 🔘 BUTTONS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnCheckStatus"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Check Status"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Done"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/feno_primary" />
+    </LinearLayout>
+
+</LinearLayout>

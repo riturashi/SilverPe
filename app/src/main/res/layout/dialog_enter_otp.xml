@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvOtpNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="As per NPCI guidelines, OTP verification is required for withdrawal amount above ₹5,000."
+        android:textColor="#8895B3"
+        android:textSize="12sp"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginBottom="14dp" />
+
+    <EditText
+        android:id="@+id/etOtp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Enter 6-digit OTP"
+        android:inputType="number"
+        android:maxLength="6"
+        android:letterSpacing="0.35"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/bg_outlined_field"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp" />
+
+    <TextView
+        android:id="@+id/tvResendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="14dp"
+        android:text="Resend OTP"
+        android:textColor="@color/feno_primary"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:padding="6dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground" />
+
+</LinearLayout>

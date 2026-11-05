@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_round"
+    android:padding="24dp"
+    android:elevation="12dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="#D1D5DB"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/feno_primary"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvOtpMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6B7280"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05:00"
+        android:textColor="@color/feno_primary"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:layout_marginTop="20dp">
+
+        <EditText android:id="@+id/otp1" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="4dp" android:gravity="center" android:inputType="number" android:maxLength="1" android:background="@drawable/input_box"/>
+        <EditText android:id="@+id/otp2" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="4dp" android:gravity="center" android:inputType="number" android:maxLength="1" android:background="@drawable/input_box"/>
+        <EditText android:id="@+id/otp3" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="4dp" android:gravity="center" android:inputType="number" android:maxLength="1" android:background="@drawable/input_box"/>
+        <EditText android:id="@+id/otp4" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="4dp" android:gravity="center" android:inputType="number" android:maxLength="1" android:background="@drawable/input_box"/>
+        <EditText android:id="@+id/otp5" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="4dp" android:gravity="center" android:inputType="number" android:maxLength="1" android:background="@drawable/input_box"/>
+        <EditText android:id="@+id/otp6" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:layout_margin="4dp" android:gravity="center" android:inputType="number" android:maxLength="1" android:background="@drawable/input_box"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="VERIFY &amp; CONTINUE"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_round" />
+
+    <TextView
+        android:id="@+id/tvResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP"
+        android:textColor="#9CA3AF"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="center"
+        android:enabled="false"/>
+</LinearLayout>

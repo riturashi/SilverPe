@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="3dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Top Row -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/bg_status_success"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:text="Loading..."
+                android:textColor="#374151"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <!-- Mobile -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Mobile No."
+                android:textStyle="bold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtMobile"
+                android:text="Loading....."
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- Aadhar -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Card No."
+                android:textStyle="bold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtAadhar"
+                android:text="Loading....."
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+        <!-- RRN -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="RRN"
+                android:textStyle="bold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtRRN"
+                android:text="Loading....."
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- ACK -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="ACK No."
+                android:textStyle="bold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtAck"
+                android:text="Loading....."
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- Transaction -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Transaction Type"
+                android:textStyle="bold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtType"
+                android:text="Loading....."
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- Reference -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Reference No."
+                android:textStyle="bold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text=":"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtRef"
+                android:text="Loading....."
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

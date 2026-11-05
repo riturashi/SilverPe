@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/app_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/header_all"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/feno_primary"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <ImageView
+
+            android:translationY="10dp"
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_back_arrow"
+            android:tint="@color/white"
+            android:contentDescription="Back" />
+
+        <TextView
+
+            android:translationY="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DMT eKYC Verification"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- BODY -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- USER DETAILS -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#F1F5F9"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                android:textSize="12sp"
+                android:textColor="#64748B" />
+
+            <TextView
+                android:id="@+id/tvMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+91 9876543210"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aadhaar Number"
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvAadhar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XXXX XXXX 1234"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- FINGER -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_newfingerprint"
+            android:contentDescription="Fingerprint" />
+
+    </LinearLayout>
+
+    <!-- BOTTOM SECTION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:orientation="vertical">
+
+        <!-- DEVICE TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Device"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp" />
+
+        <!-- DEVICE SELECT -->
+        <LinearLayout
+            android:id="@+id/btnChangeDevice"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_left_rounded_gray"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <ImageView
+                android:id="@+id/imgSelectedDevice"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_device"
+                android:contentDescription="Device" />
+
+            <TextView
+                android:id="@+id/tvDeviceShortName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Choose Device"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_marginStart="12dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_down_arrow"
+                android:tint="#64748B" />
+
+        </LinearLayout>
+
+        <!-- CONSENT -->
+        <CheckBox
+            android:id="@+id/cbConsent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:checked="true"
+            android:text="I agree to biometric authentication and authorize the use of my fingerprint for DMT Remitter Registration with Airtel Payments Bank / Jio Payments Bank."
+            android:textSize="13sp"
+            android:textColor="#000000" />
+
+        <!-- BUTTON -->
+        <Button
+            android:layout_marginBottom="50dp"
+            android:id="@+id/btnScanNow"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:text="SCAN BIOMETRIC"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:background="@drawable/bg_btn_blue" />
+
+    </LinearLayout>
+
+</LinearLayout>

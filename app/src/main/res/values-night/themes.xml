@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.FenoPay." parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">@color/feno_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="colorPrimary">@color/feno_primary</item>
+        <item name="colorPrimaryVariant">#142A66</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">#1FA9E5</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+<!--        <item name="android:windowBackground">#000000</item>-->
+        <item name="android:windowBackground">@color/app_background</item>
+
+
+    </style>
+
+</resources>

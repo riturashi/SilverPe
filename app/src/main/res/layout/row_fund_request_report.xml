@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="14dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- Top row: Request ID + Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtRequestId"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="REQ123456"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="#1F2937"/>
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:text="Pending"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_status_pending"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_marginVertical="12dp"
+            android:background="#E5E7EB"/>
+
+        <!-- Amount + Payment Mode -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="₹1000.00"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/feno_primary"/>
+
+            <TextView
+                android:id="@+id/txtPaymentMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PG"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#374151"
+                android:background="@drawable/bg_status_pending"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtBankName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Bank : SabPaisa Gateway"
+            android:textSize="14sp"
+            android:textColor="#4B5563"/>
+
+        <TextView
+            android:id="@+id/txtAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="A/C : --"
+            android:textSize="14sp"
+            android:textColor="#4B5563"/>
+
+        <TextView
+            android:id="@+id/txtIfsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="IFSC : --"
+            android:textSize="14sp"
+            android:textColor="#4B5563"/>
+
+        <TextView
+            android:id="@+id/txtReceiptNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Receipt No : --"
+            android:textSize="14sp"
+            android:textColor="#4B5563"/>
+
+        <TextView
+            android:id="@+id/txtRemark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Remark : --"
+            android:textSize="14sp"
+            android:textColor="#4B5563"/>
+
+        <TextView
+            android:id="@+id/txtAdminRemark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#B91C1C"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="26 Jul 2026, 5:30 PM"
+                android:textSize="13sp"
+                android:textColor="#9CA3AF"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
