@@ -16,8 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
-import com.silverpe.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.silverpe.R;
 
 /**
  * Curved "cradle" bottom navigation.

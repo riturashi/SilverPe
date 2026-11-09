@@ -16,36 +16,37 @@
         android:orientation="vertical"
         android:background="@color/app_background">
 
-        <!-- Fragment fills remaining space -->
-        <FrameLayout
-            android:id="@+id/fragment_container"
+        <View
+            android:id="@+id/statusBarSpacer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:background="@color/feno_primary" />
 
-        <!-- BottomNav: fully responsive, no fixed height -->
-
-
-        <!-- activity_main.xml mein purana BottomNavigationView (ya pichla MaterialCardView wala block) hata kar
-     ye rakho. mainContent LinearLayout ke andar, fragment_container ke baad. -->
-
-        <com.silverpe.utils.CurvedBottomNavigationView
-            android:id="@+id/bottomNavigation"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:elevation="0dp"
-            android:paddingTop="28dp"
-            app:itemBackground="@android:color/transparent"
-            app:itemIconSize="24dp"
-            app:itemIconTint="@color/nav_item_color_curved"
-            app:itemRippleColor="@android:color/transparent"
-            app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/bottom_nav_menu" />
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-
-
+            <com.silverpe.utils.CurvedBottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:paddingTop="28dp"
+                app:itemBackground="@android:color/transparent"
+                app:itemIconSize="24dp"
+                app:itemIconTint="@color/nav_item_color_curved"
+                app:itemRippleColor="@android:color/transparent"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottom_nav_menu" />
+        </FrameLayout>
     </LinearLayout>
 
     <!-- ═══════════════════════════════════════════
